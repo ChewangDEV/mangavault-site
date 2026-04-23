@@ -106,16 +106,54 @@ factsCards.forEach(card => {
   });
 });
 
-/*community*/
+/* ===== COMMUNITY FORM (FINAL VERSION) ===== */
+
+const popup = document.getElementById("devPopup");
+const closePopup = document.getElementById("closePopup");
 
 const form = document.querySelector(".subscribe-form");
-const message = document.querySelector(".subscribe-message");
+const iframe = document.getElementById("hidden_iframe");
 
-form.addEventListener("submit", function(){
+let submitted = false;
 
-message.textContent = "🎉 Thanks for joining MangaVault Community!";
+form.addEventListener("submit", function () {
+    submitted = true;
 
+    const btn = form.querySelector("button");
+
+    // 🔒 Disable button while submitting
+    btn.disabled = true;
+    btn.textContent = "Submitting...";
 });
+
+iframe.addEventListener("load", function () {
+
+    if (submitted) {
+        popup.style.display = "flex";
+
+        document.querySelector(".dev-box h2").textContent = "🎉 Success!";
+        document.querySelector(".dev-box p").textContent =
+            "You have successfully subscribed to MangaVault!";
+
+        // 🔄 Reset form
+        form.reset();
+
+        // 🔓 Enable button again
+        const btn = form.querySelector("button");
+        btn.disabled = false;
+        btn.textContent = "Subscribe";
+
+        submitted = false;
+
+        // ⏳ Auto close popup
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 3000);
+    }
+});
+
+
+
 
 /*BACK TO  TOP ARROW*/
 
@@ -146,8 +184,7 @@ const intro = document.getElementById("animeIntro");
 const text = document.getElementById("introText");
 const btn = document.getElementById("enterSite");
 
-const popup = document.getElementById("devPopup");
-const closePopup = document.getElementById("closePopup");
+
 
 const lines = [
     "Loading system...",
