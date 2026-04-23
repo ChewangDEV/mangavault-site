@@ -153,7 +153,13 @@ iframe.addEventListener("load", function () {
 });
 
 document.getElementById("notifyBtn").addEventListener("click", () => {
-    OneSignal.registerForPushNotifications();
+
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+
+    OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.Notifications.requestPermission();
+    });
+
 });
 
 

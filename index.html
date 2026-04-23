@@ -18,10 +18,12 @@
     <link rel="icon" href="./image/favicon.ico">
     <link rel="apple-touch-icon" href="./image/icon-192.png">
     <title>Discover Anime Characters, Manga & Facts | MangaVault</title>
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function(OneSignal) {
+            console.log("OneSignal initialized"); // 👈 ADD THIS
+
             await OneSignal.init({
                 appId: "a114cb3a-e5c3-4e77-8ec7-d41e175e6918",
         
@@ -597,7 +599,6 @@
           <p id="introText" class="intro-text"></p>
           
           <button id="enterSite" class="intro-btn">Enter</button>
-          <audio id="introSound" src="./audio/intro.mp3" preload="auto"></audio>
           <div id="flashEffect" class="flash"></div>
         
         </div>
