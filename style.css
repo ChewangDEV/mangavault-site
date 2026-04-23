@@ -224,7 +224,10 @@ body > *{
 }
 
 .hero{
+    height: auto;
     height: 100vh;
+    overflow: hidden;
+    padding-bottom: 80px; /* gives breathing space */
     background: url(./image/main-back.webp) center/cover no-repeat;
     position: relative;
     overflow: hidden;
@@ -255,7 +258,7 @@ body > *{
     width: 140px;
     height: 250px;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     transition: transform 0.2s ease-out;
 }
@@ -327,18 +330,27 @@ body > *{
 
 .cards-content{
     position: absolute;
-    bottom: 60px;
+    top: 60%;   /* push below cards */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* ONLY horizontal center */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    width: 90%;
+    max-width: 600px;
     text-align: center;
-    z-index: 10;
 }
+
+
 
 .anime-title{
     font-family: 'Bangers', cursive;
     font-size: 3.5rem;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background: linear-gradient(90deg,#FF7A00,#FFD700);
     -webkit-background-clip: text;
     background-clip: text;
@@ -347,32 +359,69 @@ body > *{
 }
 
 .share-box{
-    margin-top: 15px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
+/* remove the text label */
 .share-box p{
-    margin-bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
     color: var(--text-soft);
-    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
+/* buttons */
 .share-box a{
-    margin-right: 10px;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: var(--primary);
-    color: white;
+    padding: 8px 14px;
+    border-radius: 25px;
     font-size: 0.8rem;
+    flex: 0 1 auto;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
     transition: 0.3s;
 }
 
+/* REAL SOCIAL COLORS */
+.share-box a:nth-child(2){
+    background: #25D366; /* WhatsApp */
+}
+
+.share-box a:nth-child(3){
+    background: #1877F2; /* Facebook */
+}
+
+.share-box a:nth-child(4){
+    background: #FF4500; /* Reddit */
+}
+
 .share-box a:hover{
-    background: #ff9d00;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.share-box a:nth-child(2):hover{
+    box-shadow: 0 0 10px #25D366;
+}
+
+.share-box a:nth-child(3):hover{
+    box-shadow: 0 0 10px #1877F2;
+}
+
+.share-box a:nth-child(4):hover{
+    box-shadow: 0 0 10px #FF4500;
 }
 
 .explore-btn{
     padding: 12px 28px;
+    margin-top: 12px;
     border-radius: 30px;
     border: none;
     cursor: pointer;
@@ -393,11 +442,7 @@ body > *{
     color: var(--text);
 }
 
-.scroll-down{
-    margin-top: 20px;
-    font-size: 1rem;
-    animation: scrollAnime 1.5s infinite;
-}
+
 
 
 /*===SCROLL ARROW ANIMATION===*/
@@ -416,7 +461,7 @@ body > *{
 
 #anime-desc{
     font-size: 1.25rem;
-    padding: 15px 0;
+    padding: 5px 0;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
@@ -1333,6 +1378,15 @@ border-radius:12px;
 
 
 /*MEDIA QUERIES*/
+@media (min-width:1200px){
+    .anime-title{
+        font-size: 4rem;
+    }
+
+    #anime-desc{
+        font-size: 1.3rem;
+    }
+}
 
 @media (max-width:900px){
 
@@ -1485,17 +1539,17 @@ border-radius:12px;
     
     /* hero content */
     .cards-content{
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        
     width: 90%;
     max-width: 350px;
-    gap: 10px;
+    gap: 18px;
     }
 
-    .cards-content > *{
-    margin-bottom: 8px;
-    }
+    
     
     .hero{
         display:flex;
