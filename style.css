@@ -883,6 +883,36 @@ border-radius:12px;
     color: var(--text);
 }
 
+.notify-box{
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.notify-box p{
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    margin-bottom: 8px;
+}
+
+/* button */
+.notify-box button{
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    max-width: 250px;
+    width: 100%;
+}
+
+.notify-box button:hover{
+    background: #1d4ed8;
+}
+
 /* FOOTER */
 
 .footer{
@@ -1576,6 +1606,15 @@ border-radius:12px;
     }
     .explore-btn{
         padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .notify-box p{
+        font-size: 0.8rem;
+    }
+
+    .notify-box button{
+        width: 100%;
+        max-width: 220px;
         font-size: 0.9rem;
     }
     
