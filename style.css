@@ -346,6 +346,31 @@ body > *{
     color: transparent;
 }
 
+.share-box{
+    margin-top: 15px;
+}
+
+.share-box p{
+    margin-bottom: 8px;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+}
+
+.share-box a{
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.share-box a:hover{
+    background: #ff9d00;
+}
+
 .explore-btn{
     padding: 12px 28px;
     border-radius: 30px;
