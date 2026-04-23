@@ -153,7 +153,7 @@ iframe.addEventListener("load", function () {
 });
 
 document.getElementById("notifyBtn").addEventListener("click", () => {
-    OneSignal.showSlidedownPrompt();
+    OneSignal.registerForPushNotifications();
 });
 
 
