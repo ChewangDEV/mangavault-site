@@ -1,0 +1,373 @@
+/* =========================
+   BASE
+========================= */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #000;
+    --mainbg-color: #F5F5F0;
+    --text:#111111;
+}
+
+body{
+    background: var(--mainbg-color);
+}
+
+/* =====================
+   TOP BAR
+===================== */
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+    background: #111;
+    color: #F5F5F0;
+}
+
+.join-btn{
+    text-decoration: none;
+    padding: 6px 14px;
+    background: #F5F5F0;
+    color: #111;
+    border: 2px solid #000;
+    box-shadow: 2px 3px;
+}
+
+.join-btn:hover{
+    background: #000;
+    color: #F5F5F0;
+    transform: translateY(-2px);
+    box-shadow: 3px 6px #000;
+}
+
+.logo{
+    height: 42px;
+    filter: drop-shadow(0 0 4px red);       /* control size */
+    width: auto;
+    object-fit: contain;
+}
+
+/* =====================
+   HEADER BLACK BAR 🔥
+===================== */
+.genre-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 20px;
+    padding: 10px 16px;
+
+    background: #111;
+    color: #F5F5F0;
+
+    border: 2px solid #000;
+    box-shadow: 3px 5px;
+
+    gap: 10px;
+}
+
+.back-btn-genre{
+    padding: 6px 10px;
+    border: 2px solid #000;
+    background: #F5F5F0;
+    color: #111;
+    cursor: pointer;
+    box-shadow: 2px 3px;
+    font-size: 1.5rem;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.back-btn-genre:hover{
+    transform: translateY(-2px);
+    background: #fff;
+}
+
+/* remove old title box look */
+#genre-title{
+    margin: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+
+    font-size: 1.5rem;
+    color: #F5F5F0;
+}
+
+/* =====================
+   SEARCH INSIDE BLACK BAR
+===================== */
+#search-input{
+    padding: 6px 10px;
+
+    border: 2px solid #000;
+    outline: none;
+
+    background: #F5F5F0;
+    color: #111;
+
+    font-size: 0.85rem;
+    box-shadow: 2px 3px;
+
+    transition: 0.2s;
+}
+
+/* focus effect */
+#search-input:focus{
+    background: #fff;
+    box-shadow: 0 0 6px #fff;
+}
+
+/* =====================
+   GRID (FIXED)
+===================== */
+.genre-desc {
+    margin: 20px auto;   /* centers horizontally */
+    padding: 12px 16px;
+
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 3px 5px;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #111;
+
+    max-width: 700px;
+    text-align: center;  /* center text inside */
+}
+
+#genre-name {
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+
+
+#genre-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =====================
+   CARD
+===================== */
+.grid-item{
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #000;
+    box-shadow: 3px 5px;
+    transition: 0.3s;
+    height: 300px; /* taller like manga cover */
+    
+}
+
+.grid-item:hover{
+    transform: translateY(-5px) scale(1.02);
+}
+
+.grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 🔥 FIX */
+}
+
+.grid-item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-name{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F5F5F0;
+    padding: 5px 10px;
+    border: 2px solid #000;
+}
+
+/* =====================
+   PAGINATION
+===================== */
+#pagination{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+#pagination button{
+    padding: 6px 12px;
+    border: 2px solid #000;
+    background: #F5F5F0;
+    cursor: pointer;
+}
+
+#pagination button.active{
+    background: #111;
+    color: #F5F5F0;
+}
+
+/*===========
+===FOOTER====
+=============*/
+
+.footer{
+    background: #111;
+    color: #F5F5F0;
+    margin-top: 40px;
+    border-top: 3px solid #000;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* sections */
+.footer-section h3{
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-logo{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* links */
+.footer-section ul{
+    list-style: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 6px;
+}
+
+.footer-section ul li a{
+    text-decoration: none;
+    color: #F5F5F0;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover{
+    color: #aaa;
+    padding-left: 4px;
+}
+
+/* social */
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-social a{
+    text-decoration: none;
+    color: #F5F5F0;
+    transition: 0.3s;
+}
+
+.footer-social a:hover{
+    color: #aaa;
+    transform: translateX(4px);
+}
+
+/* bottom */
+.footer-bottom{
+    border-top: 1px solid #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-legal a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: #F5F5F0;
+    font-size: 0.9rem;
+}
+
+.footer-legal a:hover{
+    color: #aaa;
+}
+
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 768px){
+    .genre-header{
+        flex-direction: row; /* keep side by side */
+        align-items: center;
+    }
+
+    #genre-title{
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+
+    #search-input{
+        flex: 1; /* 🔥 takes remaining space */
+        min-width: 0; /* prevent overflow */
+    }
+
+    #genre-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-item{
+        height: 200px;
+    }
+    .genre-desc {
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .top-bar{
+        padding: 8px 12px;
+        gap: 8px;
+        flex-wrap: wrap; /* 🔥 allows wrapping */
+    }
+
+    .logo{
+    
+        height: 30px;
+        
+        white-space: nowrap;
+    }
+
+    .join-btn{
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        box-shadow: 1px 2px;
+    }
+}
+
+@media (max-width:480px){
+
+    .logo{
+        font-size: 0.85rem;
+    }
+
+    .join-btn{
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover hidden anime facts, character secrets, and deep lore from popular series like Naruto, One Piece, and Attack on Titan.">
+    <meta property="og:title" content="Anime Facts | MangaVault">
+    <meta property="og:description" content="Explore hidden anime facts and secrets.">
+    <meta property="og:image" content="./image/icon.png">
+    <meta name="theme-color" content="#111111">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./facts-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="./image/favicon.ico">
+    <link rel="apple-touch-icon" href="./image/icon-192.png">
+    <title>Anime Facts, Hidden Secrets & Trivia | MangaVault</title>
+</head>
+<body>
+
+    <nav class="bottom-menu">
+        <a href="./index.html"><p>Home</p></a>
+        <a href="./facts.html" class="active"><p>Facts</p></a>
+        <a href="#" id="filter-btn"><p>Filter</p></a>
+        <a href="./community.html"><p>Community</p></a>
+        <a href="./manga.html"><p>Manga</p></a>
+        <a href="./about.html"><p>About</p></a>
+    </nav>
+
+    <div id="filter-panel" class="filter-panel">
+        <span data-type="all">All</span>
+        <span data-type="dark">🖤</span>
+        <span data-type="romantic">❤️</span>
+        <span data-type="theory">😈</span>
+        <span data-type="hidden">🧠</span>
+        <span data-type="deep">💀</span>
+    </div>
+    
+    <div class="announcement-bar">
+        <div class="scroll-text">
+            Join the MangaVault to get updates about new chapter, facts, poster and more
+            <a href="index.html#community" class="subscribe-btn">Subscribe</a>
+        </div>
+    </div>
+    
+    <header class="facts-header">
+        <button id="menu-toggle" class="menu-btn">☰</button>
+        <h1>Anime Facts</h1>
+    </header>
+
+    <main class="container">
+        <aside>
+            <nav aria-label="Anime List">
+                <ul class="anime-list">
+                    <li class="title">One Piece</li>
+                    <li class="title">Chained Soldier</li>
+                    <li class="title">Demon Slayer</li>
+                    <li class="title">Dragon Ball</li>
+                    <li class="title">Naruto</li>
+                    <li class="title">One Punch Man</li>
+                    <li class="title">Attack on Titan</li>
+                    <li class="title">Food Wars</li>
+                    <li class="title">Bleach</li>
+                    <li class="title">Spy x Family</li>
+                    <li class="title">Sakamoto Days</li>
+                    <li class="title">Jujutsu Kaisen</li>
+                    <li class="title">Chainsaw Man</li>
+                    <li class="title">Solo Leveling</li>
+                    <li class="title">Blue Lock</li>
+                    <li class="title">Hunter X Hunter</li>
+                    <li class="title">Assassination Classroom</li>
+                    <li class="title">My Hero Academia</li>
+                    <li class="title">Death Note</li>
+                    <li class="title">Blue Box</li>
+                    <li class="title">Kingdom</li>
+                </ul>
+            </nav>
+            
+        </aside>
+        <section id="fact-display">
+    
+            <div id="fact-content">
+                <div class="fact-card intro">
+                    <h2>🎌 Anime Fact Hub</h2>
+                    <p class="tagline">Unlock secrets from your favorite anime worlds. Tap the Menu icon</p>
+        
+                    <div class="features">
+                        <span>🔥 Hidden Facts</span>
+                        <span>🎯 Character Trivia</span>
+                        <span>📚 Deep Lore</span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- ALWAYS VISIBLE -->
+            <button id="random-btn">🎲 Surprise Me</button>
+        
+        </section>
+    </main>
+     <!-- SOCIAL ICONS --> 
+     <footer class="footer">
+
+        <div class="footer-container">
+          
+          
+          <!-- Logo / About -->
+        <div class="footer-section">
+            <h2 class="footer-logo">MangaVault</h2>
+            <p>
+              Discover the best anime characters, manga, and hidden anime facts.
+              Built for anime fans around the world.
+            </p>
+        </div>
+          
+          <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html#trending">Trending</a></li>
+              <li><a href="./manga.html">Manga</a></li>
+              <li><a href="./facts.html">Facts</a></li>
+              <li><a href="./about.html">About</a></li>
+            </ul>
+        </div>
+          
+          <!-- Popular Anime -->
+        <div class="footer-section">
+            <h3>Popular Anime</h3>
+            <ul>
+              <li>One Piece</li>
+              <li>Jujutsu Kaisen</li>
+              <li>Solo Leveling</li>
+              <li>Demon Slayer</li>
+            </ul>
+        </div>
+          
+          <!-- Social -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+          
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          
+        </div>
+          
+          
+        </div>
+          
+        <div class="footer-bottom">
+            <p>© 2026 MangaVault | Built for Anime Fans</p>
+            <div class="footer-legal">
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./terms.html">Terms of Service</a>
+            </div>
+        </div>
+       
+    </footer>
+    
+    <script src="./facts.js"></script>
+    <script src="./fun.js"></script>
+</body>
+</html>
