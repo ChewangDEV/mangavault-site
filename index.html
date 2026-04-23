@@ -18,6 +18,15 @@
     <link rel="icon" href="./image/favicon.ico">
     <link rel="apple-touch-icon" href="./image/icon-192.png">
     <title>Discover Anime Characters, Manga & Facts | MangaVault</title>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+            appId: "a114cb3a-e5c3-4e77-8ec7-d41e175e6918",
+        });
+    });
+</script>
 </head>
 <body>
     <nav id="navbar" aria-label="Main navigation">
