@@ -119,7 +119,7 @@ let submitted = false;
 form.addEventListener("submit", function () {
     submitted = true;
 
-    const btn = form.querySelector("button");
+    const btn = form.querySelector(".subscribe-form button");
 
     // 🔒 Disable button while submitting
     btn.disabled = true;

@@ -85,7 +85,7 @@ const mangaByGenre = {
         { title: "Berserk", img: "./image/berserk.webp" },
     
         { title: "Vinland Saga", img: "./image/vinland.webp" },
-        { title: "Hell's Paradise", img: "./image/hellsparadise.webp" },
+        { title: "Hells Paradise", img: "./image/hellsparadise.webp" },
         { title: "Dororo", img: "./image/dororo.webp" },
         { title: "Made in Abyss", img: "./image/madeinabyss.webp" },
         { title: "Re Zero", img: "./image/rezero.webp" },

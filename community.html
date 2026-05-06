@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- BASIC SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anime Community Forum | MangaVault Discussions</title>
+
+  <meta name="description" content="Join MangaVault community to discuss anime, manga, share theories, and connect with fans. Post, comment, and explore trending anime discussions." />
+
+  <meta name="keywords" content="anime community, manga forum, anime discussions, otaku community, manga vault" />
+
+  <meta name="author" content="MangaVault">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://mangavault-app.netlify.app/community.html">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="MangaVault Community - Anime Discussions">
+  <meta property="og:description" content="Join the MangaVault community and share your anime thoughts, reviews, and theories.">
+  <meta property="og:image" content="https://mangavault-app.netlify.app/preview.png">
+  <meta property="og:url" content="https://mangavault-app.netlify.app/community.html">
+  <meta property="og:type" content="website">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MangaVault Community">
+  <meta name="twitter:description" content="Anime & Manga discussions platform">
+  <meta name="twitter:image" content="https://mangavault-app.netlify.app/preview.png">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="./image/favicon.ico">
+  <link rel="stylesheet" href="./community.css">
+  <link rel="stylesheet" href="./interaction.css">
+  <link rel="stylesheet" href="./notification.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MangaVault",
+    "url": "https://mangavault-app.netlify.app",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mangavault-app.netlify.app/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="logo-bar">
+            <img src="./image/logomangavault.png" alt="MangaVault logo" class="logo">
+            <h1 id="page-title">Manga<span>Vault</span></h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="manga.html">Manga</a></li>
+                <li><a href="facts.html">Facts</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+            </ul>
+        </nav>
+        <div class="user-bar">
+
+          <div class="notif-wrapper">
+
+            <button class="icon-btn" id="notifBtn">
+            
+              <i class="ri-notification-line"></i>
+            
+              <span id="notifBadge"></span>
+            
+            </button>
+            
+            <div class="notif-dropdown" id="notifDropdown">
+            
+              <div id="notifList"></div>
+            
+             </div>
+            
+          </div>
+          
+            <button class="icon-btn" id="user-profile">
+                <i class="ri-user-3-line"></i>
+            </button>
+            
+        </div>
+
+        
+    </header>
+
+    <main class="main-layout">
+       <section class="feed">
+            <section class="post">
+                <div class="user-thoughts">
+                    <button class="user-btn" id="user-avatar">
+                        <i class="ri-user-3-line"></i>
+                    </button>
+                    <textarea id="thoughts" placeholder="Enter your thoughts..."></textarea>
+
+                </div>
+                <!-- BELOW post input -->
+                <div class="link-box" id="linkBox" style="display:none;">
+  <input id="videoLinkInput" placeholder="Paste video link (YouTube)">
+                </div>
+
+                <div class="post-actions">
+                    <div class="icons-post">
+                      <!-- IMAGE -->
+                      <label for="imageInput" class="circle-btn">
+                        <i class="ri-image-line"></i>
+                      </label>
+                      <input type="file" id="imageInput" hidden>
+                  
+                      <!-- POLL -->
+                      <button onclick="togglePoll()" class="circle-btn">
+                        <i class="ri-bar-chart-line"></i>
+                      </button>
+                    </div>
+                  
+                    <button class="post-btn" onclick="addPost()">Post</button>
+                  </div>
+                  
+                  <!-- ✅ MOVE HERE -->
+                  <div id="pollBox" class="poll-box-create">
+                    <input class="poll-option" placeholder="Option 1">
+                    <input class="poll-option" placeholder="Option 2">
+                    <button onclick="addPollOption()">+ Add option</button>
+                  </div>
+                  
+                    
+                  
+                </div>
+                <div id="imagePreview" class="image-preview"></div>
+                
+            </section>
+            <section class="posting">
+                <!-- FEED POSTS -->
+                <div id="posts-container"></div>
+            </section>
+       </section>
+       <section class="short-psot">
+            <button id="floatingPostBtn" class="floating-post-btn">
+                <i class="ri-add-line"></i>
+            </button>
+       </section>
+
+       <section class="video-size">
+            <div id="toast" class="toast"></div>
+       </section>
+
+
+    </main>
+    <script src="./post-render.js"></script>
+    <script src="./notification.js"></script>
+    <script src="./community.js"></script>
+</body>
+</html>

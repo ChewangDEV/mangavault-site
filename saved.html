@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Posts | MangaVault</title>
+
+  <link rel="stylesheet" href="saved.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  >
+</head>
+<body>
+
+<div class="saved-wrapper">
+
+  <div class="saved-topbar">
+
+    <button
+      class="back-btn"
+      onclick="goBack()"
+    >
+      ← Back
+    </button>
+
+    <h2>
+      Saved Posts
+    </h2>
+
+  </div>
+
+  <div
+    id="saved-container"
+    class="saved-container"
+  ></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="saved.js"></script>
+</body>
+</html>

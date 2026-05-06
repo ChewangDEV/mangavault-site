@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Posts</title>
+  <link rel="stylesheet" href="./my-post.css">
+  <link rel="stylesheet" href="./interaction.css">
+</head>
+<body>
+
+    <div class="my-post-wrapper">
+    
+      <div class="my-post-card">
+    
+        <h2>My Posts</h2>
+    
+        <button class="back-btn" onclick="goBack()">← Back</button>
+    
+        <div id="posts-container"></div>
+    
+      </div>
+    
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <div id="confirmBox" class="confirm-box">
+      <div class="confirm-card">
+        <p><p>⚠️ Delete this post permanently?</p>
+        <div class="confirm-actions">
+          <button id="confirmYes">Delete</button>
+          <button id="confirmNo">Cancel</button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    function goBack() {
+      window.location.href = "profile.html";
+    }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="./post-render.js"></script>
+<script src="my-post.js"></script>
+</body>
+</html>

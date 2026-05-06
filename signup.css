@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* FULL BLACK BACKGROUND */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  
+    background: url('./image/akatsuki-bg-login.webp') center/cover no-repeat fixed;
+  }
+  
+
+  
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* CENTER EVERYTHING */
+  .auth-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* CARD */
+  .auth-card {
+    width: 350px;
+    background: #0a0a0a;
+  
+    padding: 35px;
+    background: rgba(0,0,0,0.6); /* transparent black */
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    text-align: center;
+  }
+  
+  /* LOGO */
+  .logo-text {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .logo-text span {
+    color: #FF6500;
+  }
+  
+  /* SUBTITLE */
+  .subtitle {
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  /* INPUTS */
+  .auth-card input {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+  
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+  
+    background: #000;
+    color: white;
+  }
+  
+  .auth-card input:focus {
+    border: 1px solid #FF6500;
+    outline: none;
+  }
+  
+  /* BUTTON */
+  .auth-card button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+  
+    background: #FF6500;
+    border: none;
+  
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  
+    margin-top: 10px;
+  }
+  
+  .auth-card button:hover {
+    transform: scale(1.05);
+  }
+
+  .tabs {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .tabs button.active {
+    color: #FF6500;
+    border-bottom: 2px solid #FF6500;
+  }
+  
+  /* SWITCH */
+  .switch {
+    margin-top: 15px;
+    color: #aaa;
+  }
+  
+  .switch a {
+    color: #FF6500;
+    text-decoration: none;
+  }
+
+  .auth-msg {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #FF6500;
+  }
+
+  @media (max-width: 768px) {
+    .auth-card {
+      width: 90%;
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .auth-card {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .logo-text {
+      font-size: 1.6rem;
+    }
+  }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign Up | MangaVault</title>
+<meta name="description" content="Sign up to MangaVault anime community. Share thoughts, upload posts, and connect with anime fans.">
+
+<link rel="canonical" href="https://mangavault-app.netlify.app/signup.html">
+
+<meta property="og:title" content="Join MangaVault">
+<meta property="og:description" content="Create your account and join the anime community.">
+<meta property="og:image" content="https://mangavault-app.netlify.app/preview.png">
+
+<link rel="stylesheet" href="signup.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">\
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+  <main>
+    <div class="auth-wrapper">
+    
+      <div class="auth-card">
+
+          <h1 class="logo-text">Manga<span>Vault</span></h1>
+          <p class="subtitle">Join the anime community</p>
+        
+          <!-- TOGGLE BUTTONS -->
+          <div class="tabs">
+            <button id="signupTab" class="active" onclick="showSignup()">Sign Up</button>
+            <button id="loginTab" onclick="showLogin()">Login</button>
+          </div>
+        
+          <!-- SIGNUP FORM -->
+          <form id="signupForm">
+            <input id="name" placeholder="Username">
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Create Password">
+            <button type="submit">Sign Up</button>
+          </form>
+        
+          <!-- LOGIN FORM -->
+          <form id="loginForm" style="display:none;">
+            <input id="loginEmail" type="email" placeholder="Email">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <button type="submit">Login</button>
+          </form>
+
+          <form 
+              id="googleForm"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScA-ovPwDj4VI3sV-yRvADbiC5d2tVSjTVaN1Gy5gwNYD5_2Q/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              style="display:none;">
+              <input name="entry.1816225963" id="gEmail">
+          </form>
+
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+        
+          <p id="authMessage" class="auth-msg"></p>
+      </div>
+  
+  </div>
+  </main>
+    <script src="./signup.js"></script>
+</body>
+</html>
