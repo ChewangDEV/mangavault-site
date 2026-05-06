@@ -216,22 +216,35 @@ body{
 }
 
 #thoughts {
-    width: 100%;
-    max-height: 200px;
-    resize: none;
-    line-height: 1.4;
-    padding: 14px 18px;
-    border-radius: 12px;
-    background: #000;
-    border: 1px solid rgba(255,255,255,0.08);
-    
-    color: #fff;
-    font-size: 1rem;
-    outline: none;
-    
-    transition: 0.3s;
-    margin-top: 3px;
-    overflow: hidden;
+
+  width:100%;
+
+  min-height:55px;
+
+  max-height:260px;
+
+  resize:none;
+
+  overflow-y:auto;
+
+  line-height:1.7;
+
+  padding:14px 18px;
+
+  border-radius:12px;
+
+  background:#000;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color:#fff;
+
+  font-size:15px;
+
+  outline:none;
+
+  transition:0.3s;
 }
 
 #thoughts:focus {
@@ -401,7 +414,13 @@ body{
     color: #fff; /* white text */
     font-size: 14px;
     margin: 8px 0 12px;
-    line-height: 1.5;
+    white-space:normal;
+
+    word-wrap:break-word;
+  
+    overflow-wrap:break-word;
+  
+    line-height:1.7;
   }
 
   .post-header strong {

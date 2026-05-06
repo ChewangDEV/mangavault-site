@@ -13,6 +13,37 @@ let profileMap = {};
 // ---------------- INIT ----------------
 document.addEventListener("DOMContentLoaded", init);
 
+// ============================
+// AUTO GROW TEXTAREA
+// ============================
+
+window.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    const thoughts =
+      document.getElementById(
+        "thoughts"
+      );
+
+    if (!thoughts) return;
+
+    thoughts.addEventListener(
+      "input",
+      () => {
+
+        thoughts.style.height =
+          "auto";
+
+        thoughts.style.height =
+          thoughts.scrollHeight + "px";
+
+      }
+    );
+
+  }
+);
+
 
 async function init() {
 

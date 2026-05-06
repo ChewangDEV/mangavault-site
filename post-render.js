@@ -41,7 +41,8 @@ async function renderPost(
 
     contentHTML = `
       <div class="post-text">
-        ${post.text || ""}
+      ${(post.text || "")
+      .replace(/\n/g, "<br>")}
       </div>
     `;
   }
@@ -51,7 +52,8 @@ async function renderPost(
 
     contentHTML = `
       <div class="post-text">
-        ${post.text || ""}
+      ${(post.text || "")
+      .replace(/\n/g, "<br>")}
       </div>
 
       <img
@@ -66,7 +68,8 @@ async function renderPost(
 
     contentHTML = `
       <div class="post-text">
-        ${post.text || ""}
+      ${(post.text || "")
+      .replace(/\n/g, "<br>")}
       </div>
 
       <video
@@ -82,7 +85,8 @@ async function renderPost(
 
     contentHTML = `
       <div class="post-text">
-        ${post.text || ""}
+      ${(post.text || "")
+      .replace(/\n/g, "<br>")}
       </div>
 
       <iframe
