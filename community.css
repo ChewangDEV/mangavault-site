@@ -227,6 +227,8 @@ body{
 
   overflow-y:auto;
 
+  scrollbar-width: none;
+
   line-height:1.7;
 
   padding:14px 18px;
@@ -245,6 +247,11 @@ body{
   outline:none;
 
   transition:0.3s;
+}
+
+#thoughts::-webkit-scrollbar{
+
+  display:none;
 }
 
 #thoughts:focus {
